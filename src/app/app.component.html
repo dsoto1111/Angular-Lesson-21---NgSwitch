@@ -1,0 +1,11 @@
+<div #element *ngFor="let person of people; index as i; trackBy: trackFunction">{{i + 1}} - {{person.name}}, {{person.age}}, {{person.archetype}}</div>
+<button (click)="changeName()">Change Name</button><button (click)="changeAge()">Change Age</button>
+<br>
+<br>
+<br>
+<ng-container [ngSwitch]="switchValue">
+    <p *ngSwitchCase="'one'">1</p>
+    <p *ngSwitchCase="'two'">2</p>
+    <p *ngSwitchCase="'three'">3</p>
+    <p *ngSwitchDefault>None</p>    
+</ng-container>
